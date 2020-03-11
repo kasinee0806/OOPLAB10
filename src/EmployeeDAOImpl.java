@@ -12,9 +12,9 @@ public class EmployeeDAOImpl implements employeeDAO {
         //CRUD
     public static final String GET_ALL_EMP = "select * from Employee";
     public static final String ADD_EMP = "insert into Employee" + "(empID,name,position,salary) values (?,?,?,?,)";
-    public static final  String UPDATE_EMP ="update Employee det" + "name = ?, position = ?, salary = ? where id = ?";
-    public static  final  String DELETE_EMP = "delete from Employee"+"where empID = ?";
-    public static final  String FIND_EMP_BY_ID = "select * from Employee"+"where empID = ?";
+    public static final  String UPDATE_EMP ="update Employee set name = ?, position = ?, salary = ? where empID = ?";
+    public static  final  String DELETE_EMP = "delete from Employee where empID = ?";
+    public static final  String FIND_EMP_BY_ID = "select * from Employee"+" where empID = ?";
     //create class instant
     private static EmployeeDAOImpl instant = new EmployeeDAOImpl();
     public static EmployeeDAOImpl getInstance(){
